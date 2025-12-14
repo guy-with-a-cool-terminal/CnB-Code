@@ -1,0 +1,9 @@
+# robots.txt for CNB Code - Web Developer Nairobi
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cnbcode.com/sitemap.xml
+
+Crawl-delay: 1
