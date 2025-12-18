@@ -10,7 +10,7 @@ Visit [cnbcode.com](https://cnbcode.com) to see how we can help.
 - AI integration for business systems
 - Workflow automation
 - E-commerce platforms
-- Deployment and maintenance
+- Deployment, Maintenance and Support
 
 ## Contact
 - Website: [cnbcode.com](https://cnbcode.com)
