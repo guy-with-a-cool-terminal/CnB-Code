@@ -71,7 +71,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-800/50 pt-8 text-center text-slate-400 text-sm">
-          <p>&copy; 2025 CnB Code. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CnB Code. All rights reserved.</p>
         </div>
       </div>
     </footer>
