@@ -1,4 +1,5 @@
 import { Globe, Smartphone, Calendar, CreditCard, MessageSquare, Wrench, CheckCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import webAppImage from "../assets/web-applications.png";
 import mobileAppImage from "../assets/mobile-apps.png";
 import bookingImage from "../assets/booking.png";
@@ -18,7 +19,8 @@ const ServicesSection = () => {
         "Look professional and trustworthy to new clients",
         "Works perfectly on phones, tablets, and computers"
       ],
-      image: webAppImage
+      image: webAppImage,
+      route: "/websites"
     },
     {
       icon: Smartphone,
@@ -30,7 +32,8 @@ const ServicesSection = () => {
         "Works on both iPhone and Android (one app, both platforms)",
         "We handle App Store submission headaches for you"
       ],
-      image: mobileAppImage
+      image: mobileAppImage,
+      route: "/mobile-apps"
     },
     {
       icon: Calendar,
@@ -42,7 +45,8 @@ const ServicesSection = () => {
         "Stop double-booking and scheduling conflicts",
         "Get back 10+ hours weekly from phone calls"
       ],
-      image: bookingImage
+      image: bookingImage,
+      route: "/booking-automation"
     },
     {
       icon: CreditCard,
@@ -54,7 +58,8 @@ const ServicesSection = () => {
         "Connect your CRM, email tools, and accounting software",
         "Sync inventory so you never oversell"
       ],
-      image: paymentImage
+      image: paymentImage,
+      route: "/payment-integrations"
     },
     {
       icon: MessageSquare,
@@ -66,7 +71,8 @@ const ServicesSection = () => {
         "Connect all your business tools so they talk to each other",
         "Save 15+ hours weekly on repetitive tasks"
       ],
-      image: automationImage
+      image: automationImage,
+      route: "/whatsapp-automation"
     },
     {
       icon: Wrench,
@@ -78,7 +84,8 @@ const ServicesSection = () => {
         "Make your site faster so customers don't leave",
         "Affordable monthly packages that grow with you"
       ],
-      image: maintenanceImage
+      image: maintenanceImage,
+      route: "/maintenance-support"
     }
   ];
 
@@ -137,14 +144,13 @@ const ServicesSection = () => {
                   ))}
                 </ul>
 
-                {/* View Pricing Link */}
-                <button
-                  onClick={scrollToPricing}
-                  className="flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors group"
-                >
-                  <span>View Pricing</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                {/* Learn More Link */}
+                <Link to={service.route}>
+                  <button className="flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors group">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

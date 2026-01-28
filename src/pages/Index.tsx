@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { ServicesSection } from "../components/ServicesSection";
+import { ServiceComparisonTable } from "../components/ServiceComparisonTable";
 import { PortfolioSection } from "../components/PortfolioSection";
 import { PricingSection } from "../components/PricingSection";
 import { ServiceBundlesSection } from "../components/ServiceBundlesSection";
@@ -8,8 +9,7 @@ import { FounderStory } from "../components/FounderStory";
 import { FAQSection } from "../components/FAQSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
-import { InteractivePrompt } from "../components/InteractivePrompt";
-import { StickyCTABar } from "../components/StickyCTABar";
+import { FloatingAction } from "../components/FloatingAction";
 
 const Index = () => {
   return (
@@ -20,6 +20,11 @@ const Index = () => {
       {/* Services Section */}
       <div id="services" className="bg-slate-50">
         <ServicesSection />
+      </div>
+
+      {/* Service Comparison Table - Help users find the right solution */}
+      <div className="bg-white">
+        <ServiceComparisonTable />
       </div>
 
       {/* Service Bundles - Business-type packages */}
@@ -39,7 +44,7 @@ const Index = () => {
 
       {/* Founder Story - Build trust and credibility */}
       <div id="why-cnb">
-      <FounderStory />
+        <FounderStory />
       </div>
 
       {/* FAQ Section - Address objections */}
@@ -53,8 +58,7 @@ const Index = () => {
       </div>
 
       <Footer />
-      <InteractivePrompt />
-      <StickyCTABar />
+      <FloatingAction context="General Inquiry" />
     </div>
   );
 };

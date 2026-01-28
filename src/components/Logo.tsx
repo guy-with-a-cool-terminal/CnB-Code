@@ -1,13 +1,14 @@
 import logoImage from "../assets/cnblogo.svg";
+import { Link } from "react-router-dom";
 
 export const Logo = () => {
   return (
-    <div className="flex items-center gap-3">
-      <img 
-        src={logoImage} 
-        alt="CnB Code" 
-        className="h-14 w-14 object-contain"
+    <Link to="/" className="flex items-center gap-3 group">
+      <img
+        src={logoImage}
+        alt="CnB Code"
+        className="h-14 w-14 object-contain group-hover:scale-105 transition-transform"
       />
-    </div>
+    </Link>
   );
 };

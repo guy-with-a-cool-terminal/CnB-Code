@@ -17,7 +17,7 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title: "Novalgo Investments",
+      title: "Novalgo Investments Kenya",
       category: "Investment Platform",
       description:
         "Professional corporate website showcasing investment services and company credibility to attract serious investors.",
@@ -29,7 +29,7 @@ const PortfolioSection = () => {
       image: novalgoImage
     },
     {
-      title: "PlugTech Business",
+      title: "PlugTech Computer Store Nairobi",
       category: "E-Commerce Store",
       description:
         "Full-featured online store for computer hardware with product catalog, shopping cart, and automated checkout.",

@@ -1,12 +1,24 @@
 import { Logo } from "./Logo";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      // On main page, scroll directly
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // On service page, navigate to main page then scroll
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
     setIsMenuOpen(false);
   };
 
@@ -16,7 +28,7 @@ export const Header = () => {
     { label: "Recent Work", id: "work" },
     { label: "FAQ", id: "faq" },
     { label: "Why Us", id: "why-cnb" },
-    
+
   ];
 
   return (
