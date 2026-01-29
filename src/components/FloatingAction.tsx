@@ -42,7 +42,7 @@ const FloatingAction = ({ context = "General Inquiry" }: FloatingActionProps) =>
 
     // Customize message based on context
     const getWhatsAppMessage = () => {
-        const greeting = "Hi CNB Code,";
+        const greeting = "Hi CnB Code,";
         let specificInterest = "I'd like to discuss a project.";
 
         if (context === "Payment Integrations") specificInterest = "I'm interested in payment integration (M-Pesa/Stripe).";
@@ -132,18 +132,32 @@ const FloatingAction = ({ context = "General Inquiry" }: FloatingActionProps) =>
                     {isOpen ? (
                         <X className="w-6 h-6 text-white" />
                     ) : (
-                        <MessageSquare className={`w-6 h-6 text-white transition-all duration-500 ${scrollProgress > 98 ? 'animate-pulse' : ''}`} />
+                        <MessageSquare className="w-6 h-6 text-white" />
                     )}
                 </button>
-
-                {/* Notification Dot (Pulse) if not open and user hasn't interacted much */}
-                {!isOpen && scrollProgress > 5 && scrollProgress < 95 && (
-                    <span className="absolute top-1 right-1 flex h-3 w-3 z-20 pointer-events-none">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
-                    </span>
-                )}
             </div>
+
+            {/* Back to Top Button - Appears when scrolled */}
+            <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className={`fixed bottom-24 right-6 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-lg border border-slate-200 flex items-center justify-center text-slate-600 transition-all duration-500 z-[59] hover:bg-blue-600 hover:text-white hover:scale-110 ${scrollProgress > 15 && !isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'
+                    }`}
+                aria-label="Back to top"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="m18 15-6-6-6 6" />
+                </svg>
+            </button>
         </div>
     );
 };

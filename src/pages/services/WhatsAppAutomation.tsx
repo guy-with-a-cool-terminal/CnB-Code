@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, MessageSquare, Bot, Phone, Users, Zap, Database } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import {
     SiWhatsapp,
     SiTwilio,
@@ -23,7 +24,7 @@ const WhatsAppAutomation = () => {
     const WHATSAPP_NUMBER = "254114399034";
 
     const handleWhatsApp = () => {
-        const message = "Hi CNB Code, I'm interested in WhatsApp automation.";
+        const message = "Hi CnB Code, I'm interested in WhatsApp automation.";
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
@@ -135,6 +136,11 @@ const WhatsAppAutomation = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>WhatsApp Automation & Chatbots Kenya | Business API Services</title>
+                <meta name="description" content="Official WhatsApp Business API integration. Build chatbots, auto-replies, and customer support systems. Verify your business with the Green Tick." />
+                <link rel="canonical" href="https://cnbcode.com/whatsapp-automation" />
+            </Helmet>
             <Header />
 
             {/* Hero Section */}

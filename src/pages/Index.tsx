@@ -11,9 +11,17 @@ import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { FloatingAction } from "../components/FloatingAction";
 
+import { Helmet } from "react-helmet-async";
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>CnB Code | High-Performance Websites & Systems That Grow Your Business</title>
+        <meta name="description" content="Don't just get a website; get a sales channel. We build custom software, M-Pesa integrations, and automated booking systems designed to increase your revenue." />
+        <meta name="keywords" content="Business growth Kenya, Automated sales systems, M-Pesa payment collection, Custom software ROI, Website design for sales,M-pesa integration Nairobi, M-pesa integration Kenya, M-pesa integration Tanzania, M-pesa integration Uganda, M-pesa integration Rwanda, M-pesa integration Burundi, M-pesa integration Rwanda, M-pesa integration Rwanda" />
+        <link rel="canonical" href="https://cnbcode.com/" />
+      </Helmet>
       <Header />
       <Hero />
 

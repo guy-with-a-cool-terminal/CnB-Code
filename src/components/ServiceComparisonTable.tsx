@@ -112,7 +112,12 @@ const ServiceComparisonTable = () => {
                     <div className="mt-8 text-center p-6 bg-slate-50 rounded-xl border border-slate-200">
                         <p className="text-sm sm:text-base text-slate-700 mb-4">
                             Still confused? <button
-                                onClick={scrollToContact}
+                                onClick={() => {
+                                    const phoneNumber = "254114399034";
+                                    const message = "Hi, I'm not sure which package is right for me. Can you help?";
+                                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                                    window.open(whatsappUrl, '_blank');
+                                }}
                                 className="font-semibold text-blue-600 hover:text-blue-700 underline"
                             >
                                 Let's talk

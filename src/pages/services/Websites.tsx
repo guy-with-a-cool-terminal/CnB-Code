@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Globe, ShoppingCart, Layout, Smartphone, Search, Zap } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import {
     SiReact,
     SiNextdotjs,
@@ -23,7 +24,7 @@ const Websites = () => {
     const WHATSAPP_NUMBER = "254114399034";
 
     const handleWhatsApp = () => {
-        const message = "Hi CNB Code, I'm interested in a new website.";
+        const message = "Hi CnB Code, I'm interested in a new website.";
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
@@ -135,6 +136,11 @@ const Websites = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>Websites & Online Stores | Web Design Nairobi | CnB Code</title>
+                <meta name="description" content="Professional web design and e-commerce development in Kenya. We build fast, heavy-duty websites that sell. React, WordPress, and Custom Shops." />
+                <link rel="canonical" href="https://cnbcode.com/websites" />
+            </Helmet>
             <Header />
 
             {/* Hero Section */}

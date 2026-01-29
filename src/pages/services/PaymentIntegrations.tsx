@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, CreditCard, Zap, Shield, Globe, Clock, Code } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import {
     SiStripe,
     SiPaypal,
@@ -20,7 +21,7 @@ const PaymentIntegrations = () => {
     const WHATSAPP_NUMBER = "254114399034";
 
     const handleWhatsApp = () => {
-        const message = "Hi CNB Code, I'm interested in payment integration (M-Pesa/Stripe).";
+        const message = "Hi CnB Code, I'm interested in payment integration (M-Pesa/Stripe).";
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
@@ -125,6 +126,11 @@ const PaymentIntegrations = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>M-Pesa & Payment API Integration | CnB Code Kenya</title>
+                <meta name="description" content="Automate M-Pesa payments for your business. Seamless Safaricom Daraja API, Stripe, and PayPal integration. Secure, instant payment processing in Nairobi." />
+                <link rel="canonical" href="https://cnbcode.com/payment-integrations" />
+            </Helmet>
             <Header />
 
             {/* Hero Section */}

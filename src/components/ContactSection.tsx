@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { MessageSquare, Send, Mail, Phone, Check } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import { useToast } from "../hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
@@ -15,7 +16,7 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const {
     register,
     handleSubmit,
@@ -65,19 +66,19 @@ export const ContactSection = () => {
           message: data.message.trim(),
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-       );
-      
+      );
+
       setShowSuccess(true);
       toast({
         title: "Message sent!",
         description: "We'll get back to you within 24 hours.",
       });
-      
+
       setTimeout(() => {
         reset();
         setShowSuccess(false);
       }, 2000);
-      
+
     } catch (error) {
       toast({
         title: "Failed to send",
@@ -117,13 +118,13 @@ export const ContactSection = () => {
           50% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2); }
         }
       `}</style>
-      
+
       <section id="contact" className="relative section-padding overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-800">
         {/* Subtle background effects - lighter at top, darker at bottom */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.03)_1px,transparent_0)] bg-[size:40px_40px] opacity-20"></div>
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
         <div className="absolute bottom-[-10%] right-0 w-[500px] h-[500px] bg-slate-900/30 blur-[120px] rounded-full"></div>
-        
+
         <div className="container-content relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -140,7 +141,7 @@ export const ContactSection = () => {
                 Tell us what you need. We'll give you a clear price and timeline within 24 hours.
               </p>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Form */}
               <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-lg">
@@ -148,7 +149,7 @@ export const ContactSection = () => {
                   <Mail className="h-5 w-5 text-blue-500" />
                   <h3 className="text-xl font-semibold text-slate-900">Your Project Details</h3>
                 </div>
-                
+
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
@@ -163,7 +164,7 @@ export const ContactSection = () => {
                       maxLength={100}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                       Email *
@@ -177,7 +178,7 @@ export const ContactSection = () => {
                       maxLength={150}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
                       WhatsApp/Phone *
@@ -192,7 +193,7 @@ export const ContactSection = () => {
                       maxLength={20}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                       Project Description *
@@ -207,9 +208,9 @@ export const ContactSection = () => {
                       maxLength={1000}
                     />
                   </div>
-                  
-                  <button 
-                    type="submit" 
+
+                  <button
+                    type="submit"
                     disabled={isSubmitting || showSuccess}
                     className="relative w-full px-6 py-3 rounded-md font-medium transition-all duration-300 overflow-hidden disabled:cursor-not-allowed disabled:opacity-50 btn-primary group"
                     style={{
@@ -219,7 +220,7 @@ export const ContactSection = () => {
                   >
                     {showSuccess && (
                       <>
-                        <span 
+                        <span
                           className="absolute inset-0 bg-green-400 rounded-md"
                           style={{ animation: 'ripple 0.8s ease-out', transformOrigin: 'center' }}
                         />
@@ -246,7 +247,7 @@ export const ContactSection = () => {
                         })}
                       </>
                     )}
-                    
+
                     <span className="relative flex items-center justify-center gap-2">
                       {showSuccess ? (
                         <>
@@ -268,23 +269,23 @@ export const ContactSection = () => {
                   </button>
                 </form>
               </div>
-              
+
               {/* Sidebar */}
               <div className="space-y-8">
                 <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-lg">
                   <div className="flex items-center gap-3 mb-6">
-                    <MessageSquare className="h-5 w-5 text-blue-500" />
+                    <MessageSquare className="h-5 w-5 text-green-500" />
                     <h3 className="text-xl font-semibold text-slate-900">WhatsApp Us</h3>
                   </div>
                   <p className="text-slate-600 mb-6">
                     Prefer to chat? Message us on WhatsApp.
                   </p>
-                  <button onClick={handleWhatsApp} className="w-full px-6 py-3 rounded-lg font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 hover:border-blue-300 transition-all group">
+                  <button onClick={handleWhatsApp} className="w-full px-6 py-3 rounded-lg font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 hover:border-blue-300 transition-all group flex items-center justify-center">
                     <MessageSquare className="inline-block mr-2 h-4 w-4" />
                     WhatsApp Us
                   </button>
                 </div>
-                
+
                 <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-lg">
                   <div className="flex items-center gap-3 mb-6">
                     <Phone className="h-5 w-5 text-blue-500" />
@@ -305,7 +306,7 @@ export const ContactSection = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="text-center">
                   <p className="text-slate-600">
                     We'll discuss your needs and tell you honestly if we're a good fit.

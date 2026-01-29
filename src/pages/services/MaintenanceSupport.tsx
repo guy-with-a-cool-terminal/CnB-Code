@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Shield, RefreshCw, Clock, Activity, Lock, LifeBuoy } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import {
     SiAmazon,
     SiDigitalocean,
@@ -23,7 +24,7 @@ const MaintenanceSupport = () => {
     const WHATSAPP_NUMBER = "254114399034";
 
     const handleWhatsApp = () => {
-        const message = "Hi CNB Code, I'm interested in maintenance support.";
+        const message = "Hi CnB Code, I'm interested in maintenance support.";
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
@@ -135,6 +136,11 @@ const MaintenanceSupport = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>Website Maintenance & Support | Security & Backups Kenya</title>
+                <meta name="description" content="Reliable website maintenance packages. Security updates, daily backups, and 24/7 uptime monitoring for Kenyan businesses." />
+                <link rel="canonical" href="https://cnbcode.com/maintenance-support" />
+            </Helmet>
             <Header />
 
             {/* Hero Section */}

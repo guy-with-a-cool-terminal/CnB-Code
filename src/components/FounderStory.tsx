@@ -1,6 +1,9 @@
-import { ArrowRight, Code, Zap, Heart } from "lucide-react";
+import { ArrowRight, Code, Zap, Heart, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const FounderStory = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -8,100 +11,45 @@ const FounderStory = () => {
   const advantages = [
     {
       icon: Zap,
-      title: "No Bureaucracy",
-      description: "Direct access to the founder. Your messages reach the person building your solution, not a middleman."
+      title: "Direct Founder Access",
+      description: "No account managers or middlemen. You speak directly to the lead engineer building your system."
     },
     {
       icon: Code,
-      title: "Fast Execution",
-      description: "Same-day fixes and updates. No committees, no approval chains. Just results."
+      title: "Rapid Execution",
+      description: "We ship features in days, not months. No bureaucracy, just efficient code."
     },
     {
       icon: Heart,
-      title: "Built for SMEs",
-      description: "We understand Kenyan businesses. Professional solutions without enterprise bloat or pricing."
+      title: "Built for Kenya",
+      description: "Local solutions integrated with M-Pesa, SMS, and WhatsApp by default."
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-slate-50 to-white" id="why-cnb">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
 
-          {/* Header */}
-          <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-slate-900">
-              How We Work Differently
+          {/* Header - Short & Punchy */}
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+              Why Choose CnB Code?
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
-              Fast, direct, and built for businesses that need results, not red tape
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+              We cut the agency fluff. You get faster delivery, direct communication, and software that actually generates revenue.
             </p>
           </div>
 
-          {/* Story Content */}
-          <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-8 sm:mb-10">
-            <div className="p-6 sm:p-8 md:p-10">
-
-              {/* The Story */}
-              <div className="prose prose-slate max-w-none">
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-4">
-                  CNB Code is a lean, agile development team built specifically for Kenyan SMEs.
-                  We deliver professional software without the overhead costs and slow timelines of traditional agencies.
-                </p>
-
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-4">
-                  Our model is simple: assemble the right specialists for each project, deliver fast,
-                  and maintain direct communication with clients. No account managers playing telephone.
-                  No inflated costs from expensive office leases. Just skilled developers who respond when you need them.
-                </p>
-
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
-                  We've built investment platforms for Novalgo Investments, complete e-commerce systems for PlugTech,
-                  and booking solutions for service businesses across Nairobi. These aren't side projects—they're
-                  live systems processing real transactions and serving real customers every day.
-                </p>
-
-                {/* What makes us different */}
-                <div className="bg-blue-50 border-l-4 border-blue-600 p-4 sm:p-6 mb-6 rounded-r-lg">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3">
-                    What You Get:
-                  </h3>
-                  <ul className="space-y-2 text-sm sm:text-base text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Direct WhatsApp access to the founder—no gatekeepers, no delays</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Rapid response times—urgent issues get handled the same day</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Transparent pricing—you know exactly what you're paying for</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold mt-0.5">→</span>
-                      <span>Honest recommendations—if you don't need it, we won't sell it</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-                  We're not trying to be the biggest agency in Kenya. We're focused on being the most
-                  reliable partner for SMEs who want professional results without enterprise complexity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Advantages Grid */}
-          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
+          {/* Advantages Grid - FRONT AND CENTER */}
+          <div className="grid sm:grid-cols-3 gap-6 mb-12">
             {advantages.map((advantage, index) => (
-              <div key={index} className="bg-white rounded-xl p-5 sm:p-6 shadow-md border border-slate-200 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <advantage.icon className="w-6 h-6 text-blue-600" />
+              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-1 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-blue-600 group-hover:scale-110 transition-transform">
+                  <advantage.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
                   {advantage.title}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
@@ -111,21 +59,66 @@ const FounderStory = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="text-center bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-6 sm:p-8 md:p-10 text-white">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
-              Ready to Work With a Reliable Development Partner?
-            </h3>
-            <p className="text-sm sm:text-base text-slate-300 mb-6 max-w-2xl mx-auto">
-              Free 30-minute consultation. We'll discuss your business needs and recommend the right solution.
-            </p>
+          {/* Collapsible Deep Dive */}
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="w-full flex items-center justify-between p-6 sm:p-8 hover:bg-slate-50 transition-colors text-left"
+            >
+              <div>
+                <h3 className="text-xl font-bold text-slate-900">Our Methodology</h3>
+                <p className="text-slate-500 text-sm mt-1">Read how we strictly prioritize your ROI</p>
+              </div>
+              {isExpanded ? <ChevronUp className="w-6 h-6 text-blue-600" /> : <ChevronDown className="w-6 h-6 text-slate-400" />}
+            </button>
+
+            <div className={`transition-all duration-300 ease-in-out px-6 sm:px-8 ${isExpanded ? "max-h-[1000px] opacity-100 pb-8" : "max-h-0 opacity-0"}`}>
+              <div className="prose prose-slate max-w-none pt-4 border-t border-slate-100">
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Most agencies overcharge and underdeliver because they have high overheads.
+                  We operate differently. We are a lean team of senior developers focused solely on
+                  building high-performance tools for Kenyan SMEs.
+                </p>
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  Whether it's an investment platform for Novalgo or e-commerce for PlugTech,
+                  we don't just write code—we build systems that handle real money and real customers.
+                  We prioritize <strong>stability</strong>, <strong>speed</strong>, and <strong>scalability</strong> over fancy buzzwords.
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-slate-900 mb-1">❌ The Old Way</h4>
+                    <ul className="text-sm text-slate-600 space-y-1">
+                      <li>• Weekly meetings with no updates</li>
+                      <li>• Dealing with "Account Managers"</li>
+                      <li>• Surprise fees for maintenance</li>
+                    </ul>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-1">✅ The CnB Way</h4>
+                    <ul className="text-sm text-blue-800 space-y-1">
+                      <li>• Direct WhatsApp line to devs</li>
+                      <li>• Same-day critical fixes</li>
+                      <li>• Transparent flat-rate pricing</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Simple CTA */}
+          <div className="text-center">
             <button
               onClick={scrollToContact}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all inline-flex items-center gap-2"
+              className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center gap-2"
             >
-              Let's Talk About Your Project
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              Start Your Project
+              <ArrowRight className="w-4 h-4" />
             </button>
+            <p className="mt-4 text-sm text-slate-500">
+              Response time: Usually under 2 hours
+            </p>
           </div>
 
         </div>

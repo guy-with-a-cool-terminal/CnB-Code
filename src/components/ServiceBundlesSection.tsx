@@ -102,12 +102,17 @@ const ServiceBundlesSection = () => {
           {bundles.map((bundle, index) => (
             <div
               key={index}
-              className={`relative rounded-xl border-2 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-                bundle.popular
-                  ? "bg-gradient-to-br from-blue-50 to-white border-blue-400 ring-2 ring-blue-500 shadow-lg"
-                  : `bg-white ${bundle.borderColor} hover:shadow-lg`
-              }`}
+              className={`relative rounded-xl border-2 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${bundle.popular
+                ? "bg-gradient-to-br from-blue-50 to-white border-blue-500 ring-4 ring-blue-500/20 shadow-xl scale-105 z-10"
+                : `bg-white ${bundle.borderColor} hover:shadow-lg`
+                }`}
             >
+              {/* Popular Badge */}
+              {bundle.popular && (
+                <div className="absolute top-0 inset-x-0 bg-blue-600 text-white text-xs font-bold text-center py-1 uppercase tracking-wide">
+                  Most Popular
+                </div>
+              )}
               {/* Content */}
               <div className="p-4 sm:p-5 md:p-6">
                 {/* Icon & Title */}
@@ -147,11 +152,10 @@ const ServiceBundlesSection = () => {
                 {/* CTA Button */}
                 <button
                   onClick={scrollToContact}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-lg shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:scale-105 ${
-                    bundle.popular
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "bg-white border-2 border-slate-300 text-slate-900 hover:border-blue-400 hover:text-blue-600"
-                  }`}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-lg shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:scale-105 ${bundle.popular
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-white border-2 border-slate-300 text-slate-900 hover:border-blue-400 hover:text-blue-600"
+                    }`}
                 >
                   Get This Package
                 </button>
@@ -169,7 +173,12 @@ const ServiceBundlesSection = () => {
             We create custom packages for any business. Tell us what you need.
           </p>
           <button
-            onClick={scrollToContact}
+            onClick={() => {
+              const phoneNumber = "254114399034";
+              const message = "Hi, I need a custom software package for my business.";
+              const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+              window.open(whatsappUrl, '_blank');
+            }}
             className="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-slate-900 text-white text-xs sm:text-sm md:text-base font-semibold rounded-lg shadow-md hover:shadow-lg hover:bg-slate-800 transition-all duration-300 inline-flex items-center gap-2"
           >
             Request Custom Package

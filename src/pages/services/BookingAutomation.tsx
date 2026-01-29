@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Calendar, Clock, Bell, UserCheck, Link, Settings } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { FaWindows } from "react-icons/fa";
 import {
     SiGooglecalendar,
@@ -23,7 +24,7 @@ const BookingAutomation = () => {
     const WHATSAPP_NUMBER = "254114399034";
 
     const handleWhatsApp = () => {
-        const message = "Hi CNB Code, I'm interested in automating my booking system.";
+        const message = "Hi CnB Code, I'm interested in automating my booking system.";
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
@@ -134,6 +135,11 @@ const BookingAutomation = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>Booking & Scheduling Automation | CnB Code Kenya</title>
+                <meta name="description" content="Automate your appointments. Self-service booking systems for doctors, consultants, and lawyers in Kenya. Reduce no-shows with SMS reminders." />
+                <link rel="canonical" href="https://cnbcode.com/booking-automation" />
+            </Helmet>
             <Header />
 
             {/* Hero Section */}

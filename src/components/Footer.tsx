@@ -1,5 +1,6 @@
 import { Logo } from "./Logo";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export const Footer = () => {
   const handleWhatsApp = () => {
@@ -13,7 +14,7 @@ export const Footer = () => {
       {/* Subtle background effects matching hero */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-[size:40px_40px] opacity-20"></div>
       <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-blue-500/10 blur-3xl rounded-full"></div>
-      
+
       <div className="container-content py-12 relative z-10">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
@@ -54,9 +55,9 @@ export const Footer = () => {
             <div className="space-y-3">
               <button
                 onClick={handleWhatsApp}
-                className="btn-primary w-full group"
+                className="btn-primary w-full group flex items-center justify-center"
               >
-                <MessageSquare className="mr-2 h-4 w-4" />
+                <SiWhatsapp className="mr-2 h-4 w-4" />
                 WhatsApp Us
               </button>
               <button

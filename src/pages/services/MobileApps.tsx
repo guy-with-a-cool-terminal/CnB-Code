@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Smartphone, WifiOff, Bell, Gauge, Layers, Database } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import {
     SiReact,
     SiApple,
@@ -23,7 +24,7 @@ const MobileApps = () => {
     const WHATSAPP_NUMBER = "254114399034";
 
     const handleWhatsApp = () => {
-        const message = "Hi CNB Code, I'm interested in building a mobile app.";
+        const message = "Hi CnB Code, I'm interested in building a mobile app.";
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
@@ -135,6 +136,11 @@ const MobileApps = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>Mobile App Development Kenya | iOS & Android Apps</title>
+                <meta name="description" content="Custom mobile app developers in Nairobi. We build high-performance React Native apps for iOS and Android. Offline mode, M-Pesa, and push notifications included." />
+                <link rel="canonical" href="https://cnbcode.com/mobile-apps" />
+            </Helmet>
             <Header />
 
             {/* Hero Section */}
