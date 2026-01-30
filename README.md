@@ -1,4 +1,4 @@
-# CNB Code
+# CnB Code
 
 Is your business drowning in manual work or losing clients to a terrible website? We build systems that fix that.
 

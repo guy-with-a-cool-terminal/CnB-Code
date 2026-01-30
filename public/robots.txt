@@ -1,4 +1,4 @@
-# robots.txt for CNB Code - Web Developer Nairobi
+# robots.txt for CnB Code - Web Developers M-pesa Integrations Nairobi
 
 User-agent: *
 Allow: /

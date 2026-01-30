@@ -17,9 +17,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>CnB Code | High-Performance Websites & Systems That Grow Your Business</title>
-        <meta name="description" content="Don't just get a website; get a sales channel. We build custom software, M-Pesa integrations, and automated booking systems designed to increase your revenue." />
-        <meta name="keywords" content="Business growth Kenya, Automated sales systems, M-Pesa payment collection, Custom software ROI, Website design for sales,M-pesa integration Nairobi, M-pesa integration Kenya, M-pesa integration Tanzania, M-pesa integration Uganda, M-pesa integration Rwanda, M-pesa integration Burundi, M-pesa integration Rwanda, M-pesa integration Rwanda" />
+        <title>M-Pesa Payment Integration & Business Automation | CnB Code Kenya</title>
+        <meta name="description" content="Accept M-Pesa payments in 3 clicks. Automate accounting, WhatsApp, and business operations for Kenyan SMEs. Starting KES 45,000." />
+        <meta name="keywords" content="M-Pesa integration Kenya, payment automation, business automation Nairobi, accounting integration, WhatsApp Business API, eTIMS integration, Safaricom Daraja API integration" />
         <link rel="canonical" href="https://cnbcode.com/" />
       </Helmet>
       <Header />

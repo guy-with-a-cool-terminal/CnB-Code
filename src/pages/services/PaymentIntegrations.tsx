@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, CreditCard, Zap, Shield, Globe, Clock, Code } from "lucide-react";
+import { ArrowRight, CheckCircle, CreditCard, Zap, Shield, Globe, Clock, Code, Smartphone, LayoutDashboard, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import {
     SiStripe,
@@ -40,33 +40,33 @@ const PaymentIntegrations = () => {
     const features = [
         {
             icon: CreditCard,
-            title: "Instant M-Pesa Payments",
-            description: "Money hits your account in seconds. No delays, no manual confirmation. Fully automated STK Push integration."
+            title: "M-Pesa & Card Checkout",
+            description: "Instant STK Push for M-Pesa and secure card processing for your website or online store."
+        },
+        {
+            icon: Zap,
+            title: "Zoho + M-Pesa Sync",
+            description: "Automatically reconcile your M-Pesa payments with Zoho Books, CRM, or Inventory in real-time."
+        },
+        {
+            icon: Code,
+            title: "Accounting Automation",
+            description: "Connect your payment flow directly to QuickBooks or Xero to eliminate manual data entry."
         },
         {
             icon: Globe,
-            title: "Accept International Cards",
-            description: "Sell globally with Stripe, PayPal, or Flutterwave. Support Visa, Mastercard, and digital wallets."
+            title: "SMS & Airtime APIs",
+            description: "Automate payouts, loyalty rewards, and instant transaction notifications to your customers."
         },
         {
             icon: Shield,
             title: "Secure & Compliant",
-            description: "PCI-DSS compliant payment handling. Your customers' data is encrypted and protected."
-        },
-        {
-            icon: Zap,
-            title: "Real-Time Webhooks",
-            description: "Instant payment notifications. Update orders, send receipts, and trigger workflows automatically."
-        },
-        {
-            icon: Code,
-            title: "Custom API Integrations",
-            description: "Connect your CRM, accounting software, or inventory system. We integrate with any API."
+            description: "PCI-DSS compliant handling for international cards (Stripe/PayPal) and encrypted Daraja API connections."
         },
         {
             icon: Clock,
-            title: "Transaction Logging",
-            description: "Complete audit trail of all transactions. Track payments, refunds, and failed attempts in your dashboard."
+            title: "Business Dashboard",
+            description: "Track every successful, pending, or failed payment with a custom audit trail for your finance team."
         }
     ];
 
@@ -145,10 +145,10 @@ const PaymentIntegrations = () => {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-slate-900">
-                                Payment Integration & APIs
+                                M-Pesa & Payment APIs
                             </h1>
                             <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto">
-                                Let customers pay with M-Pesa in 3 clicks. No abandoned carts, no payment delays, no manual confirmation.
+                                From simple checkouts to complete financial automation. Connect M-Pesa to Zoho, QuickBooks, and Xero.
                             </p>
                             <button
                                 onClick={handleCalendly}
@@ -162,17 +162,98 @@ const PaymentIntegrations = () => {
                 </section>
             </SectionReveal>
 
+            {/* The Automation Advantage: Flow Diagram Section */}
+            <SectionReveal delay={50}>
+                <section className="py-12 md:py-16 lg:py-24 bg-white overflow-hidden">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-16 md:mb-24">
+                                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
+                                    From Payment to <span className="text-blue-600">Profit Tracking.</span>
+                                </h2>
+                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                    We build the entire financial pipeline that handles your reconciliation automatically.
+                                </p>
+                            </div>
+
+                            {/* Refined Vertical Timeline */}
+                            <div className="relative max-w-2xl mx-auto">
+                                {/* Vertical Line */}
+                                <div className="absolute left-[27px] top-0 bottom-0 w-0.5 bg-slate-100 -z-10 hidden sm:block"></div>
+
+                                <div className="space-y-12 md:space-y-20">
+                                    {/* M-Pesa Step */}
+                                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
+                                        <div className="w-14 h-14 rounded-full bg-white border-2 border-slate-100 flex items-center justify-center shrink-0 shadow-sm group-hover:border-emerald-500 transition-colors bg-white z-10">
+                                            <div className="absolute -top-1 -right-1 w-6 h-6 bg-emerald-500 text-white text-xs font-bold rounded-full flex items-center justify-center">1</div>
+                                            <Smartphone className="w-6 h-6 text-[#00A651]" />
+                                        </div>
+                                        <div className="text-center sm:text-left pt-2">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">The Payment</h4>
+                                            <p className="text-slate-600">Customer pays via M-Pesa STK Push. Our system detects the transaction in &lt;1s.</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Zoho Step */}
+                                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
+                                        <div className="w-14 h-14 rounded-full bg-white border-2 border-slate-100 flex items-center justify-center shrink-0 shadow-sm group-hover:border-blue-500 transition-colors bg-white z-10">
+                                            <div className="absolute -top-1 -right-1 w-6 h-6 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center">2</div>
+                                            <LayoutDashboard className="w-6 h-6 text-blue-600" />
+                                        </div>
+                                        <div className="text-center sm:text-left pt-2">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">The Sync</h4>
+                                            <p className="text-slate-600">Webhook confirms payment & updates Zoho/QuickBooks instantly without human intervention.</p>
+                                        </div>
+                                    </div>
+
+                                    {/* WhatsApp Step */}
+                                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
+                                        <div className="w-14 h-14 rounded-full bg-white border-2 border-slate-100 flex items-center justify-center shrink-0 shadow-sm group-hover:border-indigo-500 transition-colors bg-white z-10">
+                                            <div className="absolute -top-1 -right-1 w-6 h-6 bg-indigo-600 text-white text-xs font-bold rounded-full flex items-center justify-center">3</div>
+                                            <MessageSquare className="w-6 h-6 text-indigo-600" />
+                                        </div>
+                                        <div className="text-center sm:text-left pt-2">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">The Receipt</h4>
+                                            <p className="text-slate-600">Customer gets a KRA-compliant PDF receipt via WhatsApp automatically, finishing the cycle.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 py-12 border-t border-slate-100">
+                                <div className="text-center">
+                                    <div className="text-4xl font-black text-slate-900 mb-1">0%</div>
+                                    <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Manual Reconciliations</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-4xl font-black text-blue-600 mb-1">100%</div>
+                                    <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Tax Compliance (eTIMS)</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-4xl font-black text-slate-900 mb-1">&lt; 3s</div>
+                                    <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Payment Notification</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-4xl font-black text-blue-600 mb-1">24/7</div>
+                                    <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Automated Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </SectionReveal>
+
             {/* Detailed Features Section */}
             <SectionReveal delay={100}>
                 <section className="py-12 md:py-16 lg:py-20 bg-white">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
                             <div className="text-center mb-10 md:mb-12">
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-                                    Everything You Need to Accept Payments
+                                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">
+                                    Enterprise-Grade Payment Tech
                                 </h2>
                                 <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-                                    Professional payment processing built for Kenyan businesses
+                                    We build secure, stable pipelines using official Safaricom Daraja 3.0 and Stripe APIs.
                                 </p>
                             </div>
 

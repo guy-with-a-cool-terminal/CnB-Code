@@ -50,33 +50,33 @@ const WhatsAppAutomation = () => {
     const features = [
         {
             icon: Bot,
-            title: "24/7 Auto-Replies",
-            description: "Never miss a customer message. Instant replies to common questions like 'Price?', 'Location?', 'Hours?' even at 2 AM."
-        },
-        {
-            icon: MessageSquare,
-            title: "Broadcast Messaging",
-            description: "Send offers and updates to thousands of saved contacts at once, without getting banned. Official WhatsApp API."
-        },
-        {
-            icon: Users,
-            title: "Multi-Agent Support",
-            description: "Have your entire sales team manage one WhatsApp number. Assign conversations and track performance."
+            title: "Next-Gen AI Agents",
+            description: "Beyond simple menus. AI agents that understand natural language and answer complex product questions 24/7."
         },
         {
             icon: Zap,
-            title: "Order Automation",
-            description: "Let customers browse your catalog and place orders directly inside WhatsApp. Automatically syncs with your inventory."
-        },
-        {
-            icon: Phone,
-            title: "Interactive Menus",
-            description: "Create professional 'Press 1 for Sales, 2 for Support' menus to guide customers to the right information instantly."
+            title: "Workflow Automation",
+            description: "Connect WhatsApp to 1,000+ tools via Make.com or Zapier. Automate lead follow-ups and data entry."
         },
         {
             icon: Database,
-            title: "CRM Integration",
-            description: "Save every lead automatically to your spreadsheet or CRM. Never copy-paste a phone number again."
+            title: "CRM & Zoho Integration",
+            description: "Automatically sync every conversation and lead to Salesforce, HubSpot, or Zoho CRM. No more manual copy-pasting."
+        },
+        {
+            icon: MessageSquare,
+            title: "Official API Broadcasts",
+            description: "Send personalized updates to thousands of customers securely via the official Meta Cloud API, without ban risks."
+        },
+        {
+            icon: Users,
+            title: "Multi-Agent Inbox",
+            description: "Let your entire sales team manage one official WhatsApp number with conversation assignment and tracking."
+        },
+        {
+            icon: Zap,
+            title: "Order & Payment Sync",
+            description: "Take orders directly in WhatsApp and sync them instantly with your website inventory and M-Pesa payouts."
         }
     ];
 
@@ -155,10 +155,10 @@ const WhatsAppAutomation = () => {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-slate-900">
-                                WhatsApp Automation & Chatbots
+                                WhatsApp & AI Sales Automation
                             </h1>
                             <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto">
-                                Turn WhatsApp into a 24/7 sales machine. Auto-reply to leads, take orders, and support customers instantly.
+                                Scale your sales team with intelligent AI agents. Connect WhatsApp to CRM, Zoho, and 1,000+ business tools.
                             </p>
                             <button
                                 onClick={handleCalendly}

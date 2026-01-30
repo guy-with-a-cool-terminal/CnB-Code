@@ -37,7 +37,7 @@ const FounderStory = () => {
               Why Choose CnB Code?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-              We cut the agency fluff. You get faster delivery, direct communication, and software that actually generates revenue.
+              We're focused on being the most reliable partner for SMEs who want to automate payments and operations without enterprise complexity or expensive agencies.
             </p>
           </div>
 

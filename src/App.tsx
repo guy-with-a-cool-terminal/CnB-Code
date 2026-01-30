@@ -13,6 +13,7 @@ import MobileApps from "./pages/services/MobileApps";
 import BookingAutomation from "./pages/services/BookingAutomation";
 import WhatsAppAutomation from "./pages/services/WhatsAppAutomation";
 import MaintenanceSupport from "./pages/services/MaintenanceSupport";
+import BusinessAutomation from "./pages/services/BusinessAutomation";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/mobile-apps" element={<MobileApps />} />
           <Route path="/booking-automation" element={<BookingAutomation />} />
           <Route path="/whatsapp-automation" element={<WhatsAppAutomation />} />
+          <Route path="/business-automation" element={<BusinessAutomation />} />
           <Route path="/maintenance-support" element={<MaintenanceSupport />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

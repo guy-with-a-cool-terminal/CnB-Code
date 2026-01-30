@@ -4,40 +4,40 @@ import { Link } from "react-router-dom";
 const ServiceComparisonTable = () => {
     const services = [
         {
-            need: "Get more customers online",
-            solution: "Websites & Online Stores",
-            route: "/websites",
-            price: "KES 30,000"
-        },
-        {
             need: "Accept M-Pesa payments instantly",
-            solution: "Payment Integrations",
+            solution: "Payment Integration",
             route: "/payment-integrations",
             price: "KES 45,000"
         },
         {
-            need: "Stop phone tag for appointments",
-            solution: "Online Booking",
-            route: "/booking-automation",
+            need: "Automate accounting and invoicing",
+            solution: "Business Automation",
+            route: "/business-automation",
             price: "KES 55,000"
         },
         {
-            need: "Automate customer responses 24/7",
-            solution: "WhatsApp Automation",
+            need: "Stop chasing payments manually",
+            solution: "Payment + Accounting Bundle",
+            route: "/payment-integrations", // Links to payments since it's the core
+            price: "KES 80,000"
+        },
+        {
+            need: "Automate customer communications",
+            solution: "WhatsApp & SMS Automation",
             route: "/whatsapp-automation",
-            price: "Included in packages"
+            price: "KES 40,000"
         },
         {
-            need: "Put your business in customers' pockets",
-            solution: "Mobile Apps",
-            route: "/mobile-apps",
-            price: "KES 120,000"
+            need: "Need a website to accept payments",
+            solution: "Websites & E-commerce",
+            route: "/websites",
+            price: "KES 30,000"
         },
         {
-            need: "Keep your website running smoothly",
-            solution: "Maintenance & Support",
-            route: "/maintenance-support",
-            price: "KES 4,000/month"
+            need: "Book appointments automatically",
+            solution: "Online Booking",
+            route: "/booking-automation",
+            price: "KES 55,000"
         }
     ];
 

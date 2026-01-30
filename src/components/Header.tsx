@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { Menu, X, ChevronDown, Phone, Globe, Calendar, CreditCard, Wrench } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Globe, Calendar, CreditCard, Wrench, Zap } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -44,12 +44,12 @@ export const Header = () => {
   };
 
   const services = [
-    { label: "Websites & Stores", path: "/websites", icon: Globe, desc: "Custom websites & e-commerce" },
-    { label: "Mobile Apps", path: "/mobile-apps", icon: Phone, desc: "iOS & Android solutions" },
-    { label: "Booking Automation", path: "/booking-automation", icon: Calendar, desc: "Automated scheduling" },
-    { label: "Payment APIs", path: "/payment-integrations", icon: CreditCard, desc: "M-Pesa & Stripe integration" },
+    { label: "Payment Integration", path: "/payment-integrations", icon: CreditCard, desc: "M-Pesa & Card solutions" },
+    { label: "Business Automation", path: "/business-automation", icon: Zap, desc: "Accounting & Workflow sync" },
     { label: "WhatsApp Bots", path: "/whatsapp-automation", icon: SiWhatsapp, desc: "Automated chat systems" },
-    { label: "Maintenance", path: "/maintenance-support", icon: Wrench, desc: "Updates & security" },
+    { label: "Booking Automation", path: "/booking-automation", icon: Calendar, desc: "Automated scheduling" },
+    { label: "Mobile Apps", path: "/mobile-apps", icon: Phone, desc: "iOS & Android solutions" },
+    { label: "Websites & Stores", path: "/websites", icon: Globe, desc: "Payment-ready platforms" },
   ];
 
   return (
