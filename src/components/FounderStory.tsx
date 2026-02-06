@@ -75,14 +75,15 @@ const FounderStory = () => {
             <div className={`transition-all duration-300 ease-in-out px-6 sm:px-8 ${isExpanded ? "max-h-[1000px] opacity-100 pb-8" : "max-h-0 opacity-0"}`}>
               <div className="prose prose-slate max-w-none pt-4 border-t border-slate-100">
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Most agencies overcharge and underdeliver because they have high overheads.
+                  Most agencies overcharge and underdeliver because they have high overheads and layers of management between you and the work.
                   We operate differently. We are a lean team of senior developers focused solely on
-                  building high-performance tools for Kenyan SMEs.
+                  building high-performance, revenue-driving tools for Kenyan businesses.
                 </p>
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  Whether it's an investment platform for Novalgo or e-commerce for PlugTech,
-                  we don't just write code—we build systems that handle real money and real customers.
-                  We prioritize <strong>stability</strong>, <strong>speed</strong>, and <strong>scalability</strong> over fancy buzzwords.
+                  Whether we're building high-capacity payment gateways or intelligent internet safety filters,
+                  we don't just write code—we build robust systems that handle real money and mission-critical data.
+                  Our track record is built on <strong>stability</strong>, <strong>speed</strong>, and <strong>transparency</strong>.
+                  When we commit to a project, we deliver a system that works for your business from day one.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">

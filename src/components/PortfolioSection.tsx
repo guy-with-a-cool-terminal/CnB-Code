@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ExternalLink, TrendingUp, X } from "lucide-react";
-import novalgoImage from "../assets/novalgo.png";
 import plugtechImage from "../assets/plugtech.png";
+import safeariImage from "../assets/safeari.png";
 
 const PortfolioSection = () => {
   const [modalImage, setModalImage] = useState(null);
@@ -17,19 +17,19 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title: "Novalgo Investments Kenya",
-      category: "Investment Platform",
+      title: "Safeari: Secure Internet for Kids",
+      category: "Parental Control Platform",
       description:
-        "Professional corporate website showcasing investment services and company credibility to attract serious investors.",
+        "A platform that gives Kenyan parents total control over their children's online safety by blocking harmful content and enabling real-time monitoring.",
       impact:
-        "Established strong online presence, making it easier for potential investors to evaluate and trust the company.",
-      tags: ["Finance", "Investment", "Corporate"],
-      gradient: "from-indigo-500 to-indigo-600",
-      url: "https://novalgoinvestments.co.ke/",
-      image: novalgoImage
+        "Provides families with a secure digital environment, ensuring children can explore the internet safely while parents stay informed and in control.",
+      tags: ["Internet Safety", "Parental Tools", "Smart Filtering"],
+      gradient: "from-blue-600 to-blue-800",
+      url: "https://safeari.co.ke/",
+      image: safeariImage
     },
     {
-      title: "PlugTech Computer Store Nairobi",
+      title: "PlugTech Computer Store",
       category: "E-Commerce Store",
       description:
         "Full-featured online store for computer hardware with product catalog, shopping cart, and automated checkout.",
@@ -134,6 +134,13 @@ const PortfolioSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* More Projects Message */}
+          <div className="text-center mb-8">
+            <p className="text-sm font-medium text-slate-500 italic">
+              And many more... detailed case studies and additional project samples available on request.
+            </p>
           </div>
 
           {/* Note */}
